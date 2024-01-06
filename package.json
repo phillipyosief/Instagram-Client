@@ -1,0 +1,53 @@
+{
+  "name": "@phillipyosief/instagram",
+  "productName": "Instagram",
+  "version": "1.0.0",
+  "description": "Instagram Desktop App",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Phillip Yosief",
+    "email": "phillip.yosief@outlook.com"
+  },
+  "mac": {
+    "icon": "src/icon.icns",
+    "category": "public.app-category.social-networking"
+  },
+  "win": {
+    "icon": "src/icon.png"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-builder": "^24.9.1",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": ["darwin", "linux"],
+          "config": {
+              
+          }
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "28.1.1"
+  }
+}
